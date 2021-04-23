@@ -18,7 +18,7 @@ This repo contains the code for our SIGIR 2019 paper: [Encoding Syntactic Depend
   - `parser_data.pickle`: [SinaNews Dataset](https://ieeexplore.ieee.org/document/7904683). Each sample has been converted into a denpendency tree with [LTP](https://github.com/HIT-SCIR/ltp).
   - `doc_topics.npy`: the LDA topic distribution of each sample in the dataset.
   - `label.npy`: the label of each sample.
-  - `word2vec.pickle`: the pre-trained word2vec model.
+  - `w2v_model.pickle`: the pre-trained word2vec model.
 
 # Data Preprocessing
 
@@ -26,16 +26,10 @@ Each document is cut into sentences, e.g., doc = [[sentence_1, sentence_2, ...]]
 
 Each sentence is converted into a syntactic tree, e.g., sentence_1 = [(A, ROOT), [(B, SBV), [(C, VOB)]], [(D, ATT)]]
 
-graph TD
-    ROOT---A
-    A---|SVB|B
-    B---|VOB|C
-    A---|ATT|D
-    end
 
 Each dependency relation is mapped to an ID with the following rules:
 
-SBV:1, VOB:2, IOB:3, FOB:4, DBL:5, ATT:6, ADV:7, CMP:8, COO:9, POB:10, LAD:11, RAD:12, IS:13, WP:14, HED:15}
+SBV:1, VOB:2, IOB:3, FOB:4, DBL:5, ATT:6, ADV:7, CMP:8, COO:9, POB:10, LAD:11, RAD:12, IS:13, WP:14, HED:15
 
 
 # Acknowledgements
