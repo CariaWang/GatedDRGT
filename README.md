@@ -26,6 +26,17 @@ Each document is cut into sentences, e.g., doc = [[sentence_1, sentence_2, ...]]
 
 Each sentence is converted into a syntactic tree, e.g., sentence_1 = [(A, ROOT), [(B, SBV), [(C, VOB)]], [(D, ATT)]]
 
+```mermaid
+graph TB
+
+A((A))
+B((B))
+C((C))
+D((D))
+A-->B
+B-->C
+A-->D
+```
 
 Each dependency relation is mapped to an ID with the following rules:
 
